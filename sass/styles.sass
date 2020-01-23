@@ -12,6 +12,11 @@ $very-dark-blue: hsl(234, 12%, 34%)
 $grayish-blue: hsl(229, 6%, 66%)
 $very-light-gray: hsl(0, 0%, 98%)
 
+// Breakpoints
+
+$breakpoint1: 800px
+$breakpoint2: 1440px
+
 *
     padding: 0
     margin: 0
@@ -20,10 +25,38 @@ $very-light-gray: hsl(0, 0%, 98%)
     font-family: 'Poppins', sans-serif
     font-weight: 400
 
-
+// Mobile first 
 body
     display: flex
     flex-direction: column
+    margin: 0 8%
 
-.header, .main, .footer
+.header, .main, .footer, .card
     border: 1px dotted $red
+
+// Desktop Screen
+@media screen and (min-width: $breakpoint2)
+    .main
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr 1fr
+    .supervisor-card
+        grid-row-start: 2
+        grid-row-end: 4
+        grid-column-start: 1
+        grid-column-end: 2
+    .team-builder-card
+        grid-row-start: 1
+        grid-row-end: 3
+        grid-column-start: 2
+        grid-column-end: 3
+    .karma-card
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 2
+        grid-column-end: 3
+    .calculator-card
+        grid-row-start: 2
+        grid-row-end: 4
+        grid-column-start: 3
+        grid-column-end: 4
