@@ -27,13 +27,62 @@ $breakpoint2: 1440px
 
 // Mobile first 
 body
-    display: flex
-    flex-direction: column
-    margin: 0 8%
-
+    background: $very-light-gray
+.page-wrapper
+    padding: 7%
 .header, .main, .footer, .card
     border: 1px dotted $red
-
+.header
+    text-align: center
+    margin-top: 5rem
+    margin-bottom: 5rem
+.title
+    font-size: 1.7rem
+    font-weight: 200
+    color: $grayish-blue
+.subtitle
+    font-size: 1.6rem
+    font-weight: 600
+    color: $very-dark-blue
+    margin-bottom: 1rem
+.header p
+    font-size: 1rem
+    font-weight: 400
+    color: $grayish-blue
+.main
+    display: grid
+    grid-gap: 25px
+    grid-template-columns: 1fr
+    justify-items: center
+.card
+    padding: 1rem 2rem
+    background: white
+    box-shadow: 0 0 6px 1px rgba(0,0,0,0.1)
+    border-radius: 5px
+    max-width: 320px
+    height: 230px
+    display: grid
+    grid-rows-template: 1fr
+.card h3
+    color: $very-dark-blue
+    font-size: 1.3rem
+    font-weight: 600
+    margin-bottom: 0.4rem
+.card p
+    color: $grayish-blue
+    font-size: 0.9rem
+    font-weight: 400
+.card img
+    justify-self: right
+    align-self: center
+.supervisor-card
+    border-top: 3px solid $cyan
+.team-builder-card
+    border-top: 3px solid $red
+.karma-card
+    border-top: 3px solid $orange
+.calculator-card
+    border-top: 3px solid $blue
 // Desktop Screen
 @media screen and (min-width: $breakpoint2)
     .main

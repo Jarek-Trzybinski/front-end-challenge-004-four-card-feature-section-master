@@ -8,15 +8,77 @@
   font-weight: 400; }
 
 body {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  margin: 0 8%; }
+  background: #fafafa; }
+
+.page-wrapper {
+  padding: 7%; }
 
 .header, .main, .footer, .card {
   border: 1px dotted #ea5353; }
+
+.header {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: #a3a5ae; }
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #4c4e61;
+  margin-bottom: 1rem; }
+
+.header p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a3a5ae; }
+
+.main {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr;
+  justify-items: center; }
+
+.card {
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 320px;
+  height: 230px;
+  display: grid;
+  grid-rows-template: 1fr; }
+
+.card h3 {
+  color: #4c4e61;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem; }
+
+.card p {
+  color: #a3a5ae;
+  font-size: 0.9rem;
+  font-weight: 400; }
+
+.card img {
+  justify-self: right;
+  align-self: center; }
+
+.supervisor-card {
+  border-top: 3px solid #45d3d3; }
+
+.team-builder-card {
+  border-top: 3px solid #ea5353; }
+
+.karma-card {
+  border-top: 3px solid #fcaf4a; }
+
+.calculator-card {
+  border-top: 3px solid #549ef2; }
 
 @media screen and (min-width: 1440px) {
   .main {
