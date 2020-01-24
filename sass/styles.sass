@@ -14,8 +14,9 @@ $very-light-gray: hsl(0, 0%, 98%)
 
 // Breakpoints
 
-$breakpoint1: 800px
-$breakpoint2: 1440px
+$small-screen: 800px
+$medium-screen: 1000px
+$large-screen: 1220px
 
 *
     padding: 0
@@ -25,17 +26,18 @@ $breakpoint2: 1440px
     font-family: 'Poppins', sans-serif
     font-weight: 400
 
-// Mobile first 
+// Mobile First 
 body
     background: $very-light-gray
 .page-wrapper
     padding: 7%
-.header, .main, .footer, .card
-    border: 1px dotted $red
+    margin: 0
 .header
     text-align: center
+    margin: auto
     margin-top: 5rem
     margin-bottom: 5rem
+    max-width: 480px
 .title
     font-size: 1.7rem
     font-weight: 200
@@ -83,12 +85,31 @@ body
     border-top: 3px solid $orange
 .calculator-card
     border-top: 3px solid $blue
-// Desktop Screen
-@media screen and (min-width: $breakpoint2)
+
+// Medium screen
+@media screen and (min-width: $medium-screen)
+    .header
+        max-width: 480px
+        margin: auto
+    .title
+        font-size: 2.2rem
+    .subtitle
+        font-size: 2.3rem
+    .header p
+        margin-bottom: 50px
     .main
         display: grid
+        grid-template-columns: 1fr 1fr 
+        grid-template-rows: 1fr 1fr
+        max-width: 660px
+        grid-gap: 20px
+        margin: auto
+// Large screen
+@media screen and (min-width: $large-screen)
+    .main
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: 1fr 1fr 1fr 1fr
+        max-width: 1000px
     .supervisor-card
         grid-row-start: 2
         grid-row-end: 4
